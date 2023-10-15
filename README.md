@@ -1,3 +1,5 @@
+![Alt text](image.png)
+
 ## Ejercicios de JavaScript con Arrays
 
 Este es un conjunto de ejercicios que te ayudarán a practicar el uso de métodos de Array en JavaScript. Cada ejercicio incluye una función que debe implementarse y una breve descripción de lo que se espera que haga. También se proporcionan pruebas Jasmine para verificar que las funciones funcionen correctamente.
