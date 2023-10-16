@@ -3,7 +3,8 @@
 // con los valores que sean mayor que 18
 // =============================================================================
 function getAdultsArray(ages) {
-  // Aquí tu código
+  const adultAges = ages.filter(age => age > 18);
+    return adultAges;
 }
 
 // =============================================================================
