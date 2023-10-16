@@ -4,6 +4,7 @@
 // =============================================================================
 function getAdultsArray(ages) {
   // Aquí tu código
+  return ages.filter((element) => element > 18);
 }
 
 // =============================================================================
@@ -33,7 +34,7 @@ function getIncreasedArray(numbers) {
 }
 
 // =============================================================================
-// 5. Dado el siguiente array, usa .map() para generar un nuevo array si hay números 
+// 5. Dado el siguiente array, usa .map() para generar un nuevo array si hay números
 // negativos se conviertan a positivos y si son positivos se conviertan a negativos.
 function getInvertedSignArray(numbers) {
   // Aquí tu código
