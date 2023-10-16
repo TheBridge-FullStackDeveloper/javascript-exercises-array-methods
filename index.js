@@ -4,7 +4,7 @@
 // =============================================================================
 function getAdultsArray(ages) {
   // Aquí tu código
-  return ages.filters(Element => Element > 18);
+  return ages.filter(Element => Element > 18);
 }
 
 // =============================================================================
@@ -13,6 +13,7 @@ function getAdultsArray(ages) {
 // =============================================================================
 function getEvenArray(numbers) {
   // Aquí tu código
+  return numbers.filter(Element => Element % 2 ===0);
 }
 
 // =============================================================================
@@ -23,6 +24,7 @@ function getEvenArray(numbers) {
 // =============================================================================
 function getStreamersLOL(streamers) {
   // Aquí tu código
+  return streamers.filter(Element => Element.gameMorePlayed === 'League of legends');
 }
 
 // =============================================================================
