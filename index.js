@@ -33,6 +33,7 @@ function getStreamersLOL(streamers) {
 // =============================================================================
 function getIncreasedArray(numbers) {
   // Aquí tu código
+  return numbers.map(Element => Element + 10);
 }
 
 // =============================================================================
@@ -40,6 +41,7 @@ function getIncreasedArray(numbers) {
 // negativos se conviertan a positivos y si son positivos se conviertan a negativos.
 function getInvertedSignArray(numbers) {
   // Aquí tu código
+  return numbers.map(Element=> Element * (-1) )
 }
 
 // =============================================================================
