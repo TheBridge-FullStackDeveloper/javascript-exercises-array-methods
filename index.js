@@ -24,6 +24,7 @@ function getEvenArray(numbers) {
 // =============================================================================
 function getStreamersLOL(streamers) {
   // Aquí tu código
+  return streamers.filter(streamers => streamers.gameMorePlayed === 'League of legends')
 }
 
 // =============================================================================
@@ -32,6 +33,7 @@ function getStreamersLOL(streamers) {
 // =============================================================================
 function getIncreasedArray(numbers) {
   // Aquí tu código
+  return numbers.map(element => element + 10)
 }
 
 // =============================================================================
@@ -39,6 +41,7 @@ function getIncreasedArray(numbers) {
 // negativos se conviertan a positivos y si son positivos se conviertan a negativos.
 function getInvertedSignArray(numbers) {
   // Aquí tu código
+  return numbers.map(element => element * -1)
 }
 
 // =============================================================================
