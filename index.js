@@ -50,6 +50,7 @@ function getInvertedSignArray(numbers) {
 // =============================================================================
 function getSum(numbers) {
   // Aquí tu código
+  return numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 }
 
 // =============================================================================
@@ -59,6 +60,7 @@ function getSum(numbers) {
 // =============================================================================
 function getAverage(numbers) {
   // Aquí tu código
+  return numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0) / numbers.length;
 }
 
 // =============================================================================
@@ -67,6 +69,9 @@ function getAverage(numbers) {
 // =============================================================================
 function getRepetitions(array) {
   // Aquí tu código
+  return array.reduce((result, currentValue) => (
+    result[currentValue] = (result[currentValue] || 0) + 1, result
+  ), {});
 }
 
 // =============================================================================
@@ -77,8 +82,8 @@ function getRepetitions(array) {
 // =============================================================================
 function getSumAges(people) {
   // Aquí tu código
+  return people.reduce((accumulator, person) => accumulator + person.age, 0);
 }
-
 // =============================================================================
 // 10. Dado el siguiente array, usa .reduce() para conseguir la suma de todas
 // las edades de las personas que tienen perro.
@@ -87,6 +92,12 @@ function getSumAges(people) {
 // =============================================================================
 function getSumDogAges(people) {
   // Aquí tu código
+  return people.reduce((accumulator, person) => {
+    if (person.hasDog) {
+      return accumulator + person.age;
+    }
+    return accumulator;
+  }, 0);
 }
 
 // =============================================================================
