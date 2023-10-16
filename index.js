@@ -23,7 +23,8 @@ function getEvenArray(numbers) {
 // { name: 'Nombre', gameMorePlayed: 'League of legends' }
 // =============================================================================
 function getStreamersLOL(streamers) {
-  // Aquí tu código
+  const moreHours = streamers.filter(streamers => streamers.gameMorePlayed === 'League of legends');
+  return moreHours;
 }
 
 // =============================================================================
