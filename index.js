@@ -13,6 +13,7 @@ function getAdultsArray(ages) {
 // =============================================================================
 function getEvenArray(numbers) {
   // Aquí tu código
+  return numbers.filter(element => element % 2 === 0)
 }
 
 // =============================================================================
