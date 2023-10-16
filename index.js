@@ -4,7 +4,7 @@
 // =============================================================================
 function getAdultsArray(ages) {
   // Aquí tu código
-  return ages.filter(element => element > 18);
+  return ages.filter((element) => element > 18);
 }
 
 // =============================================================================
@@ -13,7 +13,7 @@ function getAdultsArray(ages) {
 // =============================================================================
 function getEvenArray(numbers) {
   // Aquí tu código
-  return numbers.filter(element => element % 2 === 0);
+  return numbers.filter((element) => element % 2 === 0);
 }
 
 // =============================================================================
@@ -24,7 +24,9 @@ function getEvenArray(numbers) {
 // =============================================================================
 function getStreamersLOL(streamers) {
   // Aquí tu código
-  return streamers.filter(element => element.gameMorePlayed === 'League of legends');
+  return streamers.filter(
+    (element) => element.gameMorePlayed === "League of legends"
+  );
 }
 
 // =============================================================================
@@ -33,10 +35,11 @@ function getStreamersLOL(streamers) {
 // =============================================================================
 function getIncreasedArray(numbers) {
   // Aquí tu código
+  return numbers.map((element) => element + 10);
 }
 
 // =============================================================================
-// 5. Dado el siguiente array, usa .map() para generar un nuevo array si hay números 
+// 5. Dado el siguiente array, usa .map() para generar un nuevo array si hay números
 // negativos se conviertan a positivos y si son positivos se conviertan a negativos.
 function getInvertedSignArray(numbers) {
   // Aquí tu código
@@ -57,6 +60,8 @@ function getSum(numbers) {
 // =============================================================================
 function getAverage(numbers) {
   // Aquí tu código
+    const suma = numbers.reduce((acc, curr) => acc + curr,0)
+  return suma / numbers.length
 }
 
 // =============================================================================
