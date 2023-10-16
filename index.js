@@ -70,8 +70,16 @@ function getAverage(numbers) {
 // objeto con el número de veces que se repite cada string.
 // =============================================================================
 function getRepetitions(array) {
-  
+  return array.reduce((acumulador, elemento) => {
+      if (acumulador[elemento]) {
+          acumulador[elemento]++;
+      } else {
+          acumulador[elemento] = 1;
+      }
+      return acumulador;
+  }, {});
 }
+
 
 // =============================================================================
 // 9. Dado el siguiente array, usa .reduce() para conseguir la suma de todas
