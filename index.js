@@ -4,8 +4,7 @@
 // =============================================================================
 function getAdultsArray(ages) {
   // Aquí tu código
-  const filterAges = ages.filter(element => element > 18)
-  return filterAges;
+  return ages.filter(element => element > 18);
 }
 
 // =============================================================================
@@ -14,6 +13,7 @@ function getAdultsArray(ages) {
 // =============================================================================
 function getEvenArray(numbers) {
   // Aquí tu código
+  return numbers.filter(element => element % 2 === 0);
 }
 
 // =============================================================================
