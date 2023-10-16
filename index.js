@@ -3,7 +3,7 @@
 // con los valores que sean mayor que 18
 // =============================================================================
 function getAdultsArray(ages) {
-  const getAdultsArrayFiltered = ages.filter(element => element > 18)
+  const getAdultsArrayFiltered = ages.filter((e) => e > 18);
   return getAdultsArrayFiltered;
 }
 
@@ -12,8 +12,8 @@ function getAdultsArray(ages) {
 // con los valores que sean par
 // =============================================================================
 function getEvenArray(numbers) {
-  const getEvenArray = numbers.filter(function(element) {
-    return element % 2 === 0;
+  const getEvenArray = numbers.filter(function(e) {
+    return e % 2 === 0;
   });
   return getEvenArray;
 }
@@ -25,7 +25,8 @@ function getEvenArray(numbers) {
 // { name: 'Nombre', gameMorePlayed: 'League of legends' }
 // =============================================================================
 function getStreamersLOL(streamers) {
-  // Aquí tu código
+  const getStreamersLOL = streamers.filter(streamers => streamers.gameMorePlayed == "League of legends");
+  return getStreamersLOL;
 }
 
 // =============================================================================
@@ -33,14 +34,24 @@ function getStreamersLOL(streamers) {
 // cada uno de los valores aumentados en 10.
 // =============================================================================
 function getIncreasedArray(numbers) {
-  // Aquí tu código
+  const getIncreasedArray = numbers.map(function(e) {
+    return e + 10;
+  });
+  return getIncreasedArray;
 }
 
 // =============================================================================
 // 5. Dado el siguiente array, usa .map() para generar un nuevo array si hay números
 // negativos se conviertan a positivos y si son positivos se conviertan a negativos.
 function getInvertedSignArray(numbers) {
-  // Aquí tu código
+  const getInvertedSignArray = numbers.map(function(number) {
+    if (number < 0) {
+      return number * -1;
+    } else if (number > 0) {
+      return number / -1;
+    }
+  });
+  return getInvertedSignArray;
 }
 
 // =============================================================================
@@ -48,7 +59,8 @@ function getInvertedSignArray(numbers) {
 // los valores del array.
 // =============================================================================
 function getSum(numbers) {
-  // Aquí tu código
+  const getSum = numbers.reduce((acc, e) => acc + e, 0);
+  return getSum;
 }
 
 // =============================================================================
@@ -57,7 +69,8 @@ function getSum(numbers) {
 // ej. numbers = [1, 2, 3, 4, 5]
 // =============================================================================
 function getAverage(numbers) {
-  // Aquí tu código
+  const getSum = numbers.reduce((acc, e) => acc + e, 0);
+  return getSum / numbers.length;
 }
 
 // =============================================================================
