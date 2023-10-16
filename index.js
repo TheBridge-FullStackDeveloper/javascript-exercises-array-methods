@@ -50,6 +50,7 @@ function getInvertedSignArray(numbers) {
 // =============================================================================
 function getSum(numbers) {
   // Aquí tu código
+  return numbers.reduce((acumulator, element) => acumulator + element, 0)
 }
 
 // =============================================================================
@@ -59,6 +60,8 @@ function getSum(numbers) {
 // =============================================================================
 function getAverage(numbers) {
   // Aquí tu código
+  let sum = numbers.reduce((acumulator, element) => acumulator + element, 0)
+  return getAverage = sum/numbers.length
 }
 
 // =============================================================================
@@ -77,6 +80,8 @@ function getRepetitions(array) {
 // =============================================================================
 function getSumAges(people) {
   // Aquí tu código
+  console.log(people)
+  return people.reduce((acumulator, element) => acumulator + element.age, 0)
 }
 
 // =============================================================================
