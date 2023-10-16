@@ -108,7 +108,7 @@ function find100(numbers) {
 // =============================================================================
 function sortFromMinToMax(numbers) {
   // Aquí tu código
-  return numbers.sort();
+  return numbers.sort((a,b) => a - b);
 }
 
 // =============================================================================
