@@ -108,6 +108,7 @@ function find100(numbers) {
 // =============================================================================
 function sortFromMinToMax(numbers) {
   // Aquí tu código
+  return numbers.sort();
 }
 
 // =============================================================================
@@ -116,6 +117,7 @@ function sortFromMinToMax(numbers) {
 // =============================================================================
 function thereAreEven(numbers) {
   // Aquí tu código
+  return numbers.some((element => element % 2 === 0));
 }
 
 // =============================================================================
