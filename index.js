@@ -128,6 +128,7 @@ function thereAreEven(numbers) {
 // =============================================================================
 function areAllFilms2018(films) {
   // Aquí tu código
+  return films.every(element => element.year === 2018);
 }
 
 // =============================================================================
