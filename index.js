@@ -24,6 +24,7 @@ function getEvenArray(numbers) {
 // =============================================================================
 function getStreamersLOL(streamers) {
   // Aquí tu código
+  return streamers.filter(element => element.gameMorePlayed === 'League of legends');
 }
 
 // =============================================================================
