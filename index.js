@@ -163,4 +163,5 @@ function reverseNumbers(numbers) {
 // =============================================================================
 function fromStringToArray(string) {
   // Aquí tu código
+  return Array.from(string); 
 }
