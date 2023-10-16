@@ -12,7 +12,10 @@ function getAdultsArray(ages) {
 // con los valores que sean par
 // =============================================================================
 function getEvenArray(numbers) {
-  // Aquí tu código
+  const getEvenArray = numbers.filter(function(element) {
+    return element % 2 === 0;
+  });
+  return getEvenArray;
 }
 
 // =============================================================================
