@@ -2,8 +2,10 @@
 // 1. Dado el siguiente array, usa .filter() para generar un nuevo array
 // con los valores que sean mayor que 18
 // =============================================================================
+
 function getAdultsArray(ages) {
-  // Aquí tu código
+    const adultAges = ages.filter(age => age > 18);
+    return adultAges;
 }
 
 // =============================================================================
@@ -11,7 +13,8 @@ function getAdultsArray(ages) {
 // con los valores que sean par
 // =============================================================================
 function getEvenArray(numbers) {
-  // Aquí tu código
+    const evenNumbers = numbers.filter(numbers => numbers % 2 === 0);
+    return evenNumbers;
 }
 
 // =============================================================================
@@ -21,7 +24,8 @@ function getEvenArray(numbers) {
 // { name: 'Nombre', gameMorePlayed: 'League of legends' }
 // =============================================================================
 function getStreamersLOL(streamers) {
-  // Aquí tu código
+  const moreHours = streamers.filter(streamers => streamers.gameMorePlayed === 'League of legends');
+  return moreHours;
 }
 
 // =============================================================================
@@ -29,7 +33,9 @@ function getStreamersLOL(streamers) {
 // cada uno de los valores aumentados en 10.
 // =============================================================================
 function getIncreasedArray(numbers) {
-  // Aquí tu código
+  const arrayTimesTen = numbers.map(numbers => numbers + 10);
+  console.log(arrayTimesTen);
+  return arrayTimesTen
 }
 
 // =============================================================================
