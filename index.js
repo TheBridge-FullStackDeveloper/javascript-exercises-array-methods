@@ -99,6 +99,7 @@ function getSumDogAges(people) {
 // =============================================================================
 function find100(numbers) {
   // Aquí tu código
+  return numbers.find((element => element === 100));
 }
 
 // =============================================================================
