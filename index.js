@@ -42,7 +42,8 @@ function getIncreasedArray(numbers) {
 // 5. Dado el siguiente array, usa .map() para generar un nuevo array si hay números 
 // negativos se conviertan a positivos y si son positivos se conviertan a negativos.
 function getInvertedSignArray(numbers) {
-  // Aquí tu código
+  const negative = numbers.map(numbers => numbers * -1);
+  return negative
 }
 
 // =============================================================================
@@ -50,7 +51,8 @@ function getInvertedSignArray(numbers) {
 // los valores del array.
 // =============================================================================
 function getSum(numbers) {
-  // Aquí tu código
+  const suma= numbers.reduce((acumulador, elemento) => acumulador + elemento, 0 )
+  return suma
 }
 
 // =============================================================================
@@ -59,7 +61,8 @@ function getSum(numbers) {
 // ej. numbers = [1, 2, 3, 4, 5]
 // =============================================================================
 function getAverage(numbers) {
-  // Aquí tu código
+  const average = numbers.reduce((acumulador, elemento) => acumulador + elemento,0) /numbers.length;
+  return average
 }
 
 // =============================================================================
@@ -67,7 +70,7 @@ function getAverage(numbers) {
 // objeto con el número de veces que se repite cada string.
 // =============================================================================
 function getRepetitions(array) {
-  // Aquí tu código
+  
 }
 
 // =============================================================================
