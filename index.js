@@ -4,6 +4,7 @@
 // =============================================================================
 function getAdultsArray(ages) {
   // Aquí tu código
+  return ages.filter((element) => element > 18);
 }
 
 // =============================================================================
@@ -12,6 +13,7 @@ function getAdultsArray(ages) {
 // =============================================================================
 function getEvenArray(numbers) {
   // Aquí tu código
+  return numbers.filter((element) => element % 2 === 0);
 }
 
 // =============================================================================
@@ -22,6 +24,9 @@ function getEvenArray(numbers) {
 // =============================================================================
 function getStreamersLOL(streamers) {
   // Aquí tu código
+  return streamers.filter(
+    (element) => element.gameMorePlayed === "League of legends"
+  );
 }
 
 // =============================================================================
@@ -30,13 +35,15 @@ function getStreamersLOL(streamers) {
 // =============================================================================
 function getIncreasedArray(numbers) {
   // Aquí tu código
+  return numbers.map((element) => element + 10);
 }
 
 // =============================================================================
-// 5. Dado el siguiente array, usa .map() para generar un nuevo array si hay números 
+// 5. Dado el siguiente array, usa .map() para generar un nuevo array si hay números
 // negativos se conviertan a positivos y si son positivos se conviertan a negativos.
 function getInvertedSignArray(numbers) {
   // Aquí tu código
+  return numbers.map((element) => element * -1);
 }
 
 // =============================================================================
@@ -45,6 +52,7 @@ function getInvertedSignArray(numbers) {
 // =============================================================================
 function getSum(numbers) {
   // Aquí tu código
+  return numbers.reduce((acc, curr) => acc + curr, 0);
 }
 
 // =============================================================================
@@ -54,6 +62,8 @@ function getSum(numbers) {
 // =============================================================================
 function getAverage(numbers) {
   // Aquí tu código
+  const suma = numbers.reduce((acc, curr) => acc + curr, 0);
+  return suma / numbers.length;
 }
 
 // =============================================================================
@@ -62,6 +72,10 @@ function getAverage(numbers) {
 // =============================================================================
 function getRepetitions(array) {
   // Aquí tu código
+  return array.reduce((acc, curr) => {
+    acc[curr] = (acc[curr] || 0) + 1;
+    return acc;
+  }, {});
 }
 
 // =============================================================================
@@ -72,6 +86,7 @@ function getRepetitions(array) {
 // =============================================================================
 function getSumAges(people) {
   // Aquí tu código
+  return people.reduce((acc, curr) => acc + curr.age, 0);
 }
 
 // =============================================================================
@@ -82,6 +97,14 @@ function getSumAges(people) {
 // =============================================================================
 function getSumDogAges(people) {
   // Aquí tu código
+  return people.reduce((acc, curr) => {
+    if (curr.hasDog) {
+      acc += curr.age;
+    } else {
+      acc += 0;
+    }
+    return acc;
+  }, 0);
 }
 
 // =============================================================================
@@ -89,6 +112,7 @@ function getSumDogAges(people) {
 // =============================================================================
 function find100(numbers) {
   // Aquí tu código
+  return numbers.find((element) => element === 100);
 }
 
 // =============================================================================
@@ -97,6 +121,7 @@ function find100(numbers) {
 // =============================================================================
 function sortFromMinToMax(numbers) {
   // Aquí tu código
+  return numbers.sort((a, b) => a - b);
 }
 
 // =============================================================================
@@ -105,6 +130,7 @@ function sortFromMinToMax(numbers) {
 // =============================================================================
 function thereAreEven(numbers) {
   // Aquí tu código
+  return numbers.some((element) => element % 2 === 0);
 }
 
 // =============================================================================
@@ -115,6 +141,7 @@ function thereAreEven(numbers) {
 // =============================================================================
 function areAllFilms2018(films) {
   // Aquí tu código
+  return films.every((element) => element.year === 2018);
 }
 
 // =============================================================================
@@ -123,6 +150,7 @@ function areAllFilms2018(films) {
 // =============================================================================
 function joinNames(names) {
   // Aquí tu código
+  return names.join(", ");
 }
 
 // =============================================================================
@@ -131,6 +159,7 @@ function joinNames(names) {
 // =============================================================================
 function thereIsADog(animals) {
   // Aquí tu código
+  return animals.includes("Perro");
 }
 
 // =============================================================================
@@ -139,6 +168,7 @@ function thereIsADog(animals) {
 // =============================================================================
 function reverseNumbers(numbers) {
   // Aquí tu código
+  return numbers.reverse();
 }
 
 // =============================================================================
@@ -146,4 +176,5 @@ function reverseNumbers(numbers) {
 // =============================================================================
 function fromStringToArray(string) {
   // Aquí tu código
+  return Array.from(string);
 }
