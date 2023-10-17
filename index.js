@@ -12,7 +12,7 @@ function getAdultsArray(ages) {
 // con los valores que sean par
 // =============================================================================
 function getEvenArray(numbers) {
-  const getEvenArray = numbers.filter(function(e) {
+  const getEvenArray = numbers.filter(function (e) {
     return e % 2 === 0;
   });
   return getEvenArray;
@@ -25,7 +25,9 @@ function getEvenArray(numbers) {
 // { name: 'Nombre', gameMorePlayed: 'League of legends' }
 // =============================================================================
 function getStreamersLOL(streamers) {
-  const getStreamersLOL = streamers.filter(streamers => streamers.gameMorePlayed == "League of legends");
+  const getStreamersLOL = streamers.filter(
+    (streamers) => streamers.gameMorePlayed == "League of legends"
+  );
   return getStreamersLOL;
 }
 
@@ -34,7 +36,7 @@ function getStreamersLOL(streamers) {
 // cada uno de los valores aumentados en 10.
 // =============================================================================
 function getIncreasedArray(numbers) {
-  const getIncreasedArray = numbers.map(function(e) {
+  const getIncreasedArray = numbers.map(function (e) {
     return e + 10;
   });
   return getIncreasedArray;
@@ -44,7 +46,7 @@ function getIncreasedArray(numbers) {
 // 5. Dado el siguiente array, usa .map() para generar un nuevo array si hay números
 // negativos se conviertan a positivos y si son positivos se conviertan a negativos.
 function getInvertedSignArray(numbers) {
-  const getInvertedSignArray = numbers.map(function(number) {
+  const getInvertedSignArray = numbers.map(function (number) {
     if (number < 0) {
       return number * -1;
     } else if (number > 0) {
@@ -78,7 +80,11 @@ function getAverage(numbers) {
 // objeto con el número de veces que se repite cada string.
 // =============================================================================
 function getRepetitions(array) {
-  // Aquí tu código
+  const getRepetitions = array.reduce(
+    (acc, e) => ((acc[e] = acc[e] + 1 || 1), acc),
+    {}
+  );
+  return getRepetitions;
 }
 
 // =============================================================================
@@ -88,7 +94,8 @@ function getRepetitions(array) {
 // { name: 'Nombre', age: numero }
 // =============================================================================
 function getSumAges(people) {
-  // Aquí tu código
+  const getSumAges = people.reduce((acc, item) => acc + item.age, 0);
+  return getSumAges;
 }
 
 // =============================================================================
@@ -98,14 +105,22 @@ function getSumAges(people) {
 // { name: 'Nombre', age: numero, hasDog: boolean }
 // =============================================================================
 function getSumDogAges(people) {
-  // Aquí tu código
+  const getSumDogAges = people.reduce(function (acc, item) {
+    if (item.hasDog == true) {
+      return acc + item.age;
+    } else {
+      return acc;
+    }
+  }, 0);
+  return getSumDogAges;
 }
 
 // =============================================================================
 // 11. Dado el siguiente array, usa .find() para encontrar el número 100.
 // =============================================================================
 function find100(numbers) {
-  // Aquí tu código
+  const find100 = numbers.find((e) => e >= 100);
+  return find100;
 }
 
 // =============================================================================
@@ -113,7 +128,11 @@ function find100(numbers) {
 // a mayor.
 // =============================================================================
 function sortFromMinToMax(numbers) {
-  // Aquí tu código
+  const sortFromMinToMax = numbers.sort(function (a, b) {
+    return a - b;
+  });
+  console.log(numbers);
+  return sortFromMinToMax;
 }
 
 // =============================================================================
@@ -121,7 +140,8 @@ function sortFromMinToMax(numbers) {
 // par.
 // =============================================================================
 function thereAreEven(numbers) {
-  // Aquí tu código
+  const thereAreEven = numbers.some((e) => e % 2 == 0);
+  return thereAreEven;
 }
 
 // =============================================================================
@@ -131,7 +151,8 @@ function thereAreEven(numbers) {
 // { title: 'título', year: 2018 }
 // =============================================================================
 function areAllFilms2018(films) {
-  // Aquí tu código
+  const areAllFilms2018 = films.every(item => item.year >= 2018);
+  return areAllFilms2018;
 }
 
 // =============================================================================
