@@ -62,7 +62,7 @@ function getSum(numbers) {
 // =============================================================================
 function getAverage(numbers) {
   // Aquí tu código
-    const suma = numbers.reduce((acc, curr) => acc + curr,0)
+  const suma = numbers.reduce((acc, curr) => acc + curr,0)
   return suma / numbers.length
 }
 
@@ -82,6 +82,7 @@ function getRepetitions(array) {
 // =============================================================================
 function getSumAges(people) {
   // Aquí tu código
+  return people.reduce((acc, curr) => acc + curr.age, 0);
 }
 
 // =============================================================================
