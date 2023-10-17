@@ -4,6 +4,7 @@
 // =============================================================================
 function getAdultsArray(ages) {
   // Aquí tu código
+  return ages.filter(Element => Element > 18);
 }
 
 // =============================================================================
@@ -12,6 +13,7 @@ function getAdultsArray(ages) {
 // =============================================================================
 function getEvenArray(numbers) {
   // Aquí tu código
+  return numbers.filter(Element => Element % 2 ===0);
 }
 
 // =============================================================================
@@ -22,6 +24,7 @@ function getEvenArray(numbers) {
 // =============================================================================
 function getStreamersLOL(streamers) {
   // Aquí tu código
+  return streamers.filter(Element => Element.gameMorePlayed === 'League of legends');
 }
 
 // =============================================================================
@@ -30,6 +33,7 @@ function getStreamersLOL(streamers) {
 // =============================================================================
 function getIncreasedArray(numbers) {
   // Aquí tu código
+  return numbers.map(Element => Element + 10);
 }
 
 // =============================================================================
@@ -37,6 +41,7 @@ function getIncreasedArray(numbers) {
 // negativos se conviertan a positivos y si son positivos se conviertan a negativos.
 function getInvertedSignArray(numbers) {
   // Aquí tu código
+  return numbers.map(Element=> Element * (-1) )
 }
 
 // =============================================================================
@@ -45,6 +50,7 @@ function getInvertedSignArray(numbers) {
 // =============================================================================
 function getSum(numbers) {
   // Aquí tu código
+  return numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 }
 
 // =============================================================================
@@ -54,6 +60,7 @@ function getSum(numbers) {
 // =============================================================================
 function getAverage(numbers) {
   // Aquí tu código
+  return numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0) / numbers.length;
 }
 
 // =============================================================================
@@ -62,6 +69,9 @@ function getAverage(numbers) {
 // =============================================================================
 function getRepetitions(array) {
   // Aquí tu código
+  return array.reduce((result, currentValue) => (
+    result[currentValue] = (result[currentValue] || 0) + 1, result
+  ), {});
 }
 
 // =============================================================================
@@ -72,8 +82,8 @@ function getRepetitions(array) {
 // =============================================================================
 function getSumAges(people) {
   // Aquí tu código
+  return people.reduce((accumulator, person) => accumulator + person.age, 0);
 }
-
 // =============================================================================
 // 10. Dado el siguiente array, usa .reduce() para conseguir la suma de todas
 // las edades de las personas que tienen perro.
@@ -82,6 +92,12 @@ function getSumAges(people) {
 // =============================================================================
 function getSumDogAges(people) {
   // Aquí tu código
+  return people.reduce((accumulator, person) => {
+    if (person.hasDog) {
+      return accumulator + person.age;
+    }
+    return accumulator;
+  }, 0);
 }
 
 // =============================================================================
@@ -89,6 +105,7 @@ function getSumDogAges(people) {
 // =============================================================================
 function find100(numbers) {
   // Aquí tu código
+  return numbers.find(Element => Element === 100)
 }
 
 // =============================================================================
@@ -97,6 +114,7 @@ function find100(numbers) {
 // =============================================================================
 function sortFromMinToMax(numbers) {
   // Aquí tu código
+  return numbers.sort((a, b) => a - b);
 }
 
 // =============================================================================
@@ -105,6 +123,8 @@ function sortFromMinToMax(numbers) {
 // =============================================================================
 function thereAreEven(numbers) {
   // Aquí tu código
+  return numbers.some(Element => Element % 2 === 0)
+  
 }
 
 // =============================================================================
@@ -115,6 +135,7 @@ function thereAreEven(numbers) {
 // =============================================================================
 function areAllFilms2018(films) {
   // Aquí tu código
+  return films.every(films => films.year === 2018)
 }
 
 // =============================================================================
@@ -123,6 +144,7 @@ function areAllFilms2018(films) {
 // =============================================================================
 function joinNames(names) {
   // Aquí tu código
+  return names.join(', ');
 }
 
 // =============================================================================
@@ -131,6 +153,7 @@ function joinNames(names) {
 // =============================================================================
 function thereIsADog(animals) {
   // Aquí tu código
+  return animals.includes('Perro');
 }
 
 // =============================================================================
@@ -139,6 +162,7 @@ function thereIsADog(animals) {
 // =============================================================================
 function reverseNumbers(numbers) {
   // Aquí tu código
+  return numbers.reverse(numbers)
 }
 
 // =============================================================================
@@ -146,4 +170,5 @@ function reverseNumbers(numbers) {
 // =============================================================================
 function fromStringToArray(string) {
   // Aquí tu código
+  return Array.from(string);
 }
