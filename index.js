@@ -123,6 +123,7 @@ function sortFromMinToMax(numbers) {
 // =============================================================================
 function thereAreEven(numbers) {
   // Aquí tu código
+  return numbers.some(Element => Element % 2 === 0)
   
 }
 
@@ -134,6 +135,7 @@ function thereAreEven(numbers) {
 // =============================================================================
 function areAllFilms2018(films) {
   // Aquí tu código
+  return films.every(films => films.year === 2018)
 }
 
 // =============================================================================
@@ -142,6 +144,7 @@ function areAllFilms2018(films) {
 // =============================================================================
 function joinNames(names) {
   // Aquí tu código
+  return names.join(', ');
 }
 
 // =============================================================================
@@ -150,6 +153,7 @@ function joinNames(names) {
 // =============================================================================
 function thereIsADog(animals) {
   // Aquí tu código
+  return animals.includes('Perro');
 }
 
 // =============================================================================
@@ -158,6 +162,7 @@ function thereIsADog(animals) {
 // =============================================================================
 function reverseNumbers(numbers) {
   // Aquí tu código
+  return numbers.reverse(numbers)
 }
 
 // =============================================================================
@@ -165,4 +170,5 @@ function reverseNumbers(numbers) {
 // =============================================================================
 function fromStringToArray(string) {
   // Aquí tu código
+  return Array.from(string);
 }
