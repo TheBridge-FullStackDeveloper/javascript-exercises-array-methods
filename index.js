@@ -131,7 +131,6 @@ function sortFromMinToMax(numbers) {
   const sortFromMinToMax = numbers.sort(function (a, b) {
     return a - b;
   });
-  console.log(numbers);
   return sortFromMinToMax;
 }
 
@@ -160,7 +159,8 @@ function areAllFilms2018(films) {
 // nombres en una coma.
 // =============================================================================
 function joinNames(names) {
-  // Aquí tu código
+  const joinNames = names.join(", ");
+  return joinNames;
 }
 
 // =============================================================================
@@ -168,7 +168,8 @@ function joinNames(names) {
 // incluido en el array.
 // =============================================================================
 function thereIsADog(animals) {
-  // Aquí tu código
+  const thereIsADog = animals.includes("Perro");
+  return thereIsADog;
 }
 
 // =============================================================================
@@ -176,12 +177,14 @@ function thereIsADog(animals) {
 // elementos del array.
 // =============================================================================
 function reverseNumbers(numbers) {
-  // Aquí tu código
+  const reverseNumbers = numbers.reverse();
+  return reverseNumbers;
 }
 
 // =============================================================================
 // 18. Dado el siguiente array, usa .from() para convertirlo en un array.
 // =============================================================================
 function fromStringToArray(string) {
-  // Aquí tu código
+  const fromStringToArray = Array.from(string);
+  return fromStringToArray;
 }
