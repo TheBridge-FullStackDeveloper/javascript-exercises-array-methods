@@ -72,6 +72,14 @@ function getAverage(numbers) {
 // =============================================================================
 function getRepetitions(array) {
   // Aquí tu código
+  return array.reduce((accumulator, element) => {
+    if (element in accumulator) {
+      accumulator[element]++; 
+    } else {
+      accumulator[element] = 1; 
+    }
+    return accumulator;
+  }, {});
 }
 
 // =============================================================================
