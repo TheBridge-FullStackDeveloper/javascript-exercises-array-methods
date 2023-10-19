@@ -4,7 +4,7 @@
 // =============================================================================
 function getAdultsArray(ages) {
   const adultAges = ages.filter(age => age > 18);
-    return adultAges;
+  return adultAges;
 }
 
 // =============================================================================
@@ -32,14 +32,27 @@ function getStreamersLOL(streamers) {
 // cada uno de los valores aumentados en 10.
 // =============================================================================
 function getIncreasedArray(numbers) {
-  // Aquí tu código
+  const nuevoArray = numbers.map(function (elemento) {
+    return elemento + 10;
+  });
+  return nuevoArray;
 }
 
 // =============================================================================
 // 5. Dado el siguiente array, usa .map() para generar un nuevo array si hay números 
 // negativos se conviertan a positivos y si son positivos se conviertan a negativos.
 function getInvertedSignArray(numbers) {
-  // Aquí tu código
+  const invertedArray = numbers.map(number => {
+    if (number < 0) {
+      return -number;
+    } else if (number > 0) {
+      return -number;
+    } else {
+      return 0;
+    }
+  });
+
+  return invertedArray;
 }
 
 // =============================================================================
