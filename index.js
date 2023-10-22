@@ -123,7 +123,9 @@ function find100(numbers) {
 // a mayor.
 // =============================================================================
 function sortFromMinToMax(numbers) {
-  // Aquí tu código
+  const numbersArr = [...numbers]
+  const numbersSorted = numbersArr.sort((a,b)=> a-b);
+  return numbersSorted
 }
 
 // =============================================================================
@@ -131,7 +133,8 @@ function sortFromMinToMax(numbers) {
 // par.
 // =============================================================================
 function thereAreEven(numbers) {
-  // Aquí tu código
+  const evenNum = numbers.some(elemento => elemento % 2 === 0 );
+  return evenNum
 }
 
 // =============================================================================
@@ -141,7 +144,8 @@ function thereAreEven(numbers) {
 // { title: 'título', year: 2018 }
 // =============================================================================
 function areAllFilms2018(films) {
-  // Aquí tu código
+  const filmYear = films.every(el => el.year === 2018);
+  return filmYear
 }
 
 // =============================================================================
@@ -149,7 +153,8 @@ function areAllFilms2018(films) {
 // nombres en una coma.
 // =============================================================================
 function joinNames(names) {
-  // Aquí tu código
+  const jointNames = names.join(", ");
+  return jointNames
 }
 
 // =============================================================================
@@ -157,7 +162,8 @@ function joinNames(names) {
 // incluido en el array.
 // =============================================================================
 function thereIsADog(animals) {
-  // Aquí tu código
+  const elementExist = animals.includes('Perro');
+  return elementExist
 }
 
 // =============================================================================
@@ -165,12 +171,14 @@ function thereIsADog(animals) {
 // elementos del array.
 // =============================================================================
 function reverseNumbers(numbers) {
-  // Aquí tu código
-}
+  const reverse = numbers.reverse();
+  return reverse
+  }
 
 // =============================================================================
 // 18. Dado el siguiente array, usa .from() para convertirlo en un array.
 // =============================================================================
 function fromStringToArray(string) {
-  // Aquí tu código
+  const strToArr = Array.from(string);
+  return strToArr
 }
