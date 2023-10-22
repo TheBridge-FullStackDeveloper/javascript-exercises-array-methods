@@ -88,7 +88,8 @@ function getRepetitions(array) {
 // { name: 'Nombre', age: numero }
 // =============================================================================
 function getSumAges(people) {
-  // Aquí tu código
+  const sum = people.reduce((acumulador, elemento) => acumulador + elemento['age'],0)
+  return sum
 }
 
 // =============================================================================
@@ -98,14 +99,23 @@ function getSumAges(people) {
 // { name: 'Nombre', age: numero, hasDog: boolean }
 // =============================================================================
 function getSumDogAges(people) {
-  // Aquí tu código
+  const sumDogAges = people.reduce((acc, index) => {
+    if (index.hasDog === true) {
+      return acc + index.age;
+    } else {
+      return acc;
+    }
+  }, 0);
+
+  return sumDogAges;
 }
 
 // =============================================================================
 // 11. Dado el siguiente array, usa .find() para encontrar el número 100.
 // =============================================================================
 function find100(numbers) {
-  // Aquí tu código
+  const elementFound = numbers.find(elemento => elemento === 100);
+  return elementFound
 }
 
 // =============================================================================
